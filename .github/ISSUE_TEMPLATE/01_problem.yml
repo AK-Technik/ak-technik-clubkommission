@@ -1,0 +1,60 @@
+name: "🐛 Problem / Fehlverhalten"
+description: "Etwas funktioniert nicht wie erwartet"
+labels: ["gesucht: hilfe"]
+body:
+  - type: dropdown
+    id: kategorie
+    attributes:
+      label: Kategorie
+      options:
+        - Home Automation / HA
+        - Netzwerk / IT
+        - Lighting / DMX / OSC
+        - Audio / Dante / MIDI
+        - Sicherheit / Zugang
+        - Video / Streaming
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: input
+    id: venue
+    attributes:
+      label: Venue / Location
+      placeholder: "z.B. Festsaal Kreuzberg"
+
+  - type: textarea
+    id: beschreibung
+    attributes:
+      label: Was passiert?
+      placeholder: "Kurze Beschreibung des Problems..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: setup
+    attributes:
+      label: Setup / Hardware / Software
+      placeholder: |
+        - Hardware: z.B. Sonoff ZBDongle-P, Raspberry Pi 5
+        - Software: z.B. Home Assistant 2024.12, QLC+ 5.0
+        - Netzwerk: z.B. VLAN-Setup, IP-Adressen
+
+  - type: textarea
+    id: was_versucht
+    attributes:
+      label: Was wurde bereits versucht?
+      placeholder: "Troubleshooting-Schritte die schon ausprobiert wurden..."
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Fehlermeldungen / Logs
+      render: shell
+      placeholder: "Relevante Logs oder Fehlermeldungen hier einfügen..."
+
+  - type: textarea
+    id: kontext
+    attributes:
+      label: Weiterer Kontext
+      placeholder: "Seit wann tritt das Problem auf? Gab es Änderungen vorher?"
