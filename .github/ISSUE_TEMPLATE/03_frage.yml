@@ -1,0 +1,31 @@
+name: "💡 Frage / Diskussion"
+description: "Offene Frage an die Gruppe oder Meinungsaustausch"
+labels: ["diskussion"]
+body:
+  - type: dropdown
+    id: kategorie
+    attributes:
+      label: Kategorie
+      options:
+        - Home Automation / HA
+        - Netzwerk / IT
+        - Lighting / DMX / OSC
+        - Audio / Dante / MIDI
+        - Sicherheit / Zugang
+        - Video / Streaming
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: textarea
+    id: frage
+    attributes:
+      label: Die Frage
+    validations:
+      required: true
+
+  - type: textarea
+    id: kontext
+    attributes:
+      label: Hintergrund / Kontext
+      placeholder: "Was ist der Anlass? Welche Optionen wurden schon überlegt?"
